@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Appointment | Helpful Hearts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+
+    <link
+      rel="shortcut icon"
+      href="/assets/Logo/favicon.png"
+      type="image/x-icon"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      //https://jqueryui.com/datepicker/
+      $(function () {
+        $("#datepicker").datepicker({
+          numberOfMonths: 1,
+          showButtonPanel: true,
+          minDate: 0,
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav class="w-[90%] flex justify-between mx-auto py-2 mb-[4vh]">
+      <div class="w-32">
+        <img src="/assets/Logo/2.png" alt="logo" />
+        <!-- <p class="font-bold text-black text-lg">Helpful Hearts</p> -->
+      </div>
+      <div class="flex items-center gap-6">
+        <button
+          class="bg-blue-800 text-white px-5 py-2 rounded-full hover:bg-blue-600"
+        >
+          <a href="/index.html">Sign Out</a>
+        </button>
+      </div>
+    </nav>
+    <main class="grid grid-cols-1 md:grid-cols-2 w-[92%] mx-auto">
+      <section class="grid px-6 pb-20">
+        <div id="service-selector">
+          <p class="text-xl font-bold text-blue-800">Select a service</p>
+          <div
+            class="mt-4 grid max-w-3xl gap-x-4 gap-y-3 sm:grid-cols-1 md:grid-cols-2"
+          >
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="radio1"
+                type="radio"
+                name="service"
+                value="medical_checkup"
+                checked
+              />
+              <span
+                class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-blue-400"
+              ></span>
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg p-4 shadow-lg shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="radio1"
+              >
+                <span class="mt-2- font-medium">Medical Checkup</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="radio2"
+                type="radio"
+                name="service"
+                value="MRI_scan"
+              />
+              <span
+                class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-blue-400"
+              ></span>
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg p-4 shadow-lg shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="radio2"
+              >
+                <span class="mt-2- font-medium">MRI Scan</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="radio3"
+                type="radio"
+                name="service"
+                value="CT_scan"
+              />
+              <span
+                class="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-blue-400"
+              ></span>
+
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg p-4 shadow-lg shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="radio3"
+              >
+                <span class="mt-2- font-medium">CT Scan</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="date-selector">
+          <p class="mt-8 text-xl font-bold text-blue-800">Select a date</p>
+          <div class="relative mt-4 w-56">
+            <div
+              class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3"
+            >
+              <svg
+                aria-hidden="true"
+                class="h-5 w-5 text-gray-500"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <input
+              id="datepicker"
+              type="text"
+              class="datepicker-input block w-full rounded-lg border border-blue-300 bg-blue-50 p-2.5 pl-10 text-blue-800 outline-none ring-opacity-30 placeholder:text-blue-800 focus:ring focus:ring-blue-300 sm:text-sm"
+              placeholder="Select date"
+            />
+          </div>
+        </div>
+
+        <div id="timer-selector">
+          <p class="mt-8 mb-8 text-xl font-bold text-blue-800">Select a time</p>
+          <div class="mt-4 grid grid-cols-3 gap-2 lg:w-[100%]">
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time1"
+                type="radio"
+                name="time"
+                value="9"
+                checked
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time1"
+              >
+                <span class="mt-2- font-medium">9:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time2"
+                type="radio"
+                name="time"
+                value="10"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time2"
+              >
+                <span class="mt-2- font-medium">10:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time3"
+                type="radio"
+                name="time"
+                value="11"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time3"
+              >
+                <span class="mt-2- font-medium">11:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time4"
+                type="radio"
+                name="time"
+                value="12"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time4"
+              >
+                <span class="mt-2- font-medium">12:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time5"
+                type="radio"
+                name="time"
+                value="13"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time5"
+              >
+                <span class="mt-2- font-medium">13:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time6"
+                type="radio"
+                name="time"
+                value="14"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time6"
+              >
+                <span class="mt-2- font-medium">14:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time7"
+                type="radio"
+                name="time"
+                value="15"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time7"
+              >
+                <span class="mt-2- font-medium">15:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time8"
+                type="radio"
+                name="time"
+                value="16"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time8"
+              >
+                <span class="mt-2- font-medium">16:00</span>
+              </label>
+            </div>
+            <div class="relative">
+              <input
+                class="peer hidden"
+                id="time9"
+                type="radio"
+                name="time"
+                value="17"
+              />
+              <label
+                class="flex h-full cursor-pointer flex-col rounded-lg px-4 py-2 shadow-lg bg-blue-100 text-center text-blue-800 shadow-slate-100 peer-checked:bg-blue-900 peer-checked:text-white"
+                for="time9"
+              >
+                <span class="mt-2- font-medium">17:00</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button
+          id="book-now"
+          class="bg-blue-800 mt-8 text-white px-5 py-2 rounded-full hover:bg-blue-600"
+          onclick="onBook()"
+        >
+          Book Now
+        </button>
+      </section>
+
+      <section class="text-center content-center">
+        <h3 class="text-xl font-bold text-blue-800 mb-4">Booked Appointment</h3>
+        <div class="grid col-span-1">
+          <div
+            class="shadow-lg w-[92%] md:w-[60%] shadow-slate-100 p-8 mb-4 mx-auto rounded-lg bg-white"
+          >
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Booked Appointment On</p>
+              <p class="font-bold">March 24,2024</p>
+            </div>
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Service Type</p>
+              <p class="font-bold">CT Scan</p>
+            </div>
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Appointment Date</p>
+              <p class="font-bold">April 24,2024</p>
+            </div>
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Appointment Time</p>
+              <p class="font-bold">9:00</p>
+            </div>
+          </div>
+          <div
+            class="shadow-lg w-[92%] md:w-[60%] shadow-slate-100 p-8 mb-4 mx-auto rounded-lg bg-white"
+          >
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Booked Appointment On</p>
+              <p class="font-bold">March 24,2024</p>
+            </div>
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Service Type</p>
+              <p class="font-bold">Medical Checkup</p>
+            </div>
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Appointment Date</p>
+              <p class="font-bold">April 24,2024</p>
+            </div>
+            <div class="flex w-full justify-between text-sm md:text-base">
+              <p class="text-gray-700">Appointment Time</p>
+              <p class="font-bold">10:00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      function onBook() {
+        var services = document.getElementsByName("service");
+        var service_value;
+        for (var i = 0; i < services.length; i++) {
+          if (services[i].checked) {
+            service_value = services[i].value.replace("_", " ");
+          }
+        }
+
+        var times = document.getElementsByName("time");
+        var time_value;
+        for (var i = 0; i < times.length; i++) {
+          if (times[i].checked) {
+            time_value = times[i].value.replace("_", " ");
+          }
+        }
+        var date = document.getElementById("datepicker").value;
+        if (date == null || date == "") {
+          alert("Please select date");
+        } else {
+          alert(
+            "Your Appointment has been requested for " +
+              service_value +
+              " " +
+              date +
+              " " +
+              time_value +
+              ":00 " +
+              "\nWait for confirmation"
+          );
+        }
+      }
+    </script>
+    <footer class="bg-blue-800 mt-4">
+      <div class="mx-auto w-[92%] max-w-screen-xl p-4 py-6 items-center">
+        <div class="flex justify-between">
+          <div class="mb-6 md:mb-0">
+            <p class="font-bold text-white text-lg">Helpful Hearts</p>
+          </div>
+          <div class="text-right">
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+              Links
+            </h2>
+            <ul class="text-white font-medium">
+              <li>
+                <a class="hover:text-white" href="/index.html#hero">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#services"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#doctors"
+                  >Doctors</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#counter"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/extra/contact_us.html"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white text-center"
+          >&copy; <a href="#" class="hover:underline">Team Risers</a>. All
+          Rights Reserved.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

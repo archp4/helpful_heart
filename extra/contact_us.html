@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Contact us</title>
+    <!-- <link href="./src/output.css" rel="stylesheet" /> -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="/assets/Logo/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <nav class="flex justify-between items-center w-[92%] mx-auto py-2">
+      <div class="w-32">
+        <p class="font-bold text-black text-lg">Helpful Hearts</p>
+      </div>
+      <div
+        class="nav-links duration-500 md:static absolute bg-white text-black md:min-h-fit min-h-[30vh] left-0 top-[-100%] z-10 md:z-0 w-full md:w-auto flex items-center px-5"
+      >
+        <ul
+          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+        >
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#hero">Home</a>
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#doctors"
+              >Doctors</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#counter"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/extra/contact_us.html"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-6">
+        <button
+          class="bg-blue-800 text-white px-5 py-2 rounded-full hover:bg-blue-600"
+        >
+          <a href="/extra/login.html"> Book Appointment</a>
+        </button>
+        <ion-icon
+          onclick="toggleMenu()"
+          name="menu"
+          class="text-3xl .menu cursor-pointer md:hidden"
+        ></ion-icon>
+      </div>
+    </nav>
+
+    <section
+      id="story"
+      class="items-center w-[92%] md:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Our Story
+      </h2>
+      <p>
+        Welcome to Helpful Hearts - where compassion meets expertise in
+        healthcare. Founded in 1995, our journey began with a simple mission: to
+        provide accessible and comprehensive healthcare services to our
+        community. From our humble beginnings to our current position as a
+        trusted healthcare provider, our commitment to excellence and
+        patient-centered care remains unwavering.
+      </p>
+    </section>
+
+    <section
+      id="mission"
+      class="items-center w-[92%] md:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Our Mission
+      </h2>
+      <p>
+        At Helpful Hearts, our mission is to empower individuals to lead
+        healthier lives by providing compassionate and comprehensive healthcare
+        services. We strive to enhance access to quality healthcare, promote
+        preventive care, and foster a culture of wellness within our community.
+      </p>
+    </section>
+
+    <section
+      id="values"
+      class="items-center w-[92%] md:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2 class="mb-4 text-4xl font-extrabold text-gray-900 md:text-5xl">
+        Our Values
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 mt-[5vh] gap-4">
+        <div>
+          <h3 class="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
+            Compassion
+          </h3>
+          <p>
+            We believe in approaching healthcare with empathy, kindness, and
+            understanding. Every interaction, whether with patients, colleagues,
+            or partners, is infused with compassion and respect.
+          </p>
+        </div>
+        <div>
+          <h3 class="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
+            Excellence
+          </h3>
+          <p>
+            We are dedicated to maintaining the highest standards of medical
+            care and professionalism. Our team of healthcare professionals
+            undergoes continuous training and education to ensure the delivery
+            of exceptional healthcare services.
+          </p>
+        </div>
+        <div class="md:col-span-2 md:mt-[5vh]">
+          <h3 class="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
+            Collaboration
+          </h3>
+          <p>
+            We understand the importance of collaboration in achieving optimal
+            health outcomes. By working closely with patients, caregivers, and
+            other healthcare providers, we create personalized care plans that
+            address the unique needs of each individual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="team"
+      class="items-center w-[92%] md:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Our Team
+      </h2>
+      <p>
+        At Helpful Hearts, our greatest asset is our team of dedicated
+        healthcare professionals. From doctors and nurses to administrative
+        staff, each member plays a vital role in delivering quality care and
+        ensuring a positive patient experience. Together, we are committed to
+        making a difference in the lives of those we serve.
+      </p>
+    </section>
+
+    <section
+      id="commitment"
+      class="items-center w-[92%] md:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Our Commitment
+      </h2>
+      <p>
+        Our commitment to our patients extends beyond the walls of our clinic.
+        We are dedicated to fostering long-term relationships built on trust,
+        integrity, and reliability. Whether it's providing timely appointments,
+        offering support and guidance, or advocating for patient rights, we are
+        here for you every step of the way.
+      </p>
+    </section>
+
+    <section
+      id="join"
+      class="items-center w-[92%] md:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Join Us in Our Mission
+      </h2>
+      <p>
+        Together, we can create a healthier, happier community. Join us at
+        Helpful Hearts as we continue to make a positive impact on the lives of
+        individuals and families through compassionate and comprehensive
+        healthcare.
+      </p>
+    </section>
+
+    <section class="body-font relative items-center w-[92%] md:w-[80%] mx-auto">
+      <div
+        class="container px-5 py-12 mx-auto flex sm:flex-nowrap flex-wrap flex-col-reverse md:flex-row"
+      >
+        <div
+          class="lg:w-2/3 md:w-1/2 rounded-lg overflow-hidden border border-gray-200 sm:mr-10 p-10 flex items-end justify-start relative"
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            class="absolute inset-0"
+            frameborder="0"
+            title="map"
+            marginheight="0"
+            marginwidth="0"
+            scrolling="no"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.9586712328837!2d-79.38637982404647!3d43.66982935135543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3517c0b3021f%3A0xf230b6fbcc847026!2sHumber%20International%20Graduate%20School!5e0!3m2!1sen!2sca!4v1710810379969!5m2!1sen!2sca"
+            style="filter: grayscale(0) contrast(1.2) opacity(1)"
+          ></iframe>
+          <div class="bg-white relative flex-wrap py-6 rounded shadow-md">
+            <div class="lg:w-1/2 px-6">
+              <h2
+                class="title-font font-bold text-gray-900 tracking-widest text-xs"
+              >
+                ADDRESS
+              </h2>
+              <p class="mt-1">
+                Humber IGS Campus, 59 Hayden St, Toronto, ON M4Y 2P2
+              </p>
+            </div>
+            <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+              <h2
+                class="title-font font-bold text-gray-900 tracking-widest text-xs"
+              >
+                EMAIL
+              </h2>
+              <a class="text-blue-500 leading-relaxed">enquiry@humber.ca</a>
+              <h2
+                class="title-font font-bold text-gray-900 tracking-widest text-xs mt-4"
+              >
+                PHONE
+              </h2>
+              <p class="leading-relaxed">+1 (416)-675-3111</p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full mt-8 md:mt-0 mb-4"
+        >
+          <h2 class="text-gray-900 text-2xl font-semibold text-center mb-1">
+            Contact Form
+          </h2>
+
+          <div class="relative mb-4">
+            <label for="name" class="leading-7 text-sm text-gray-600"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+          <div class="relative mb-4">
+            <label for="message" class="leading-7 text-sm text-gray-600"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              class="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+            ></textarea>
+          </div>
+          <button
+            class="text-white bg-blue-800 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded-full text-lg"
+            onclick="contact()"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-800 mt-4">
+      <div class="mx-auto w-[92%] max-w-screen-xl p-4 py-6 items-center">
+        <div class="flex justify-between">
+          <div class="mb-6 md:mb-0">
+            <p class="font-bold text-white text-lg">Helpful Hearts</p>
+          </div>
+          <div class="text-right">
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Links
+            </h2>
+            <ul class="text-white font-medium">
+              <li>
+                <a class="hover:text-white" href="/index.html#hero">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#services"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#doctors"
+                  >Doctors</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#counter"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/extra/contact_us.html"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white text-center"
+          >&copy; <a href="#" class="hover:underline">Team Risers</a>. All
+          Rights Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script>
+      navlinks = document.querySelector(".nav-links");
+      let e = document.querySelector(".menu");
+      function toggleMenu() {
+        navlinks.classList.toggle("top-[6%]");
+        e.name = e.name === "menu" ? "close" : "menu";
+      }
+
+      function contact() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let message = document.getElementById("message").value;
+
+        if (name == "" || message == "" || email == "") {
+          alert("Enter Name, Email and Message!");
+          event.preventDefault();
+        } else {
+          alert("Messgae send successfull.");
+        }
+      }
+    </script>
+  </body>
+</html>

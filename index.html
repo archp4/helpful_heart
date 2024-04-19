@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helpful Hearts</title>
+    <!-- <link href="./src/output.css" rel="stylesheet" /> -->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="/assets/Logo/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <nav class="flex justify-between items-center w-[92%] mx-auto py-2">
+      <div class="w-32">
+        <!-- <img 
+          class="w-16"
+          src="https://asuratoon.com/wp-content/uploads/2021/03/Group_1.png"
+          alt="asura scans manhwa comic"
+        /> -->
+        <img src="/assets/Logo/2.png" alt="logo" />
+        <!-- <p class="font-bold text-black text-lg">Helpful Hearts</p> -->
+      </div>
+      <div
+        class="nav-links duration-500 md:static absolute bg-white text-black md:min-h-fit min-h-[30vh] left-0 top-[-100%] z-10 md:z-0 w-full md:w-auto flex items-center px-5"
+      >
+        <ul
+          class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8"
+        >
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#hero">Home</a>
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#services"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#doctors"
+              >Doctors</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/index.html#counter"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a class="hover:text-gray-500" href="/extra/contact_us.html"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-6">
+        <button
+          class="bg-blue-800 text-white px-5 py-2 rounded-full hover:bg-blue-600"
+        >
+          <a href="/extra/login.html"> Book Appointment</a>
+        </button>
+        <ion-icon
+          onclick="toggleMenu()"
+          name="menu"
+          class="text-3xl .menu cursor-pointer md:hidden"
+        ></ion-icon>
+      </div>
+    </nav>
+
+    <section id="hero">
+      <div class="relative">
+        <ul id="slider">
+          <li class="h-[60vh] md:h-[92.5vh]">
+            <img
+              name="slide"
+              class="h-full w-full object-cover"
+              src="Wallpapers/backiee-282500.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
+        <div class="absolute p-5 flex h-[70vh] md:h-full w-full top-0 left-0">
+          <div class="my-auto w-full flex justify-between">
+            <button
+              onclick="previous()"
+              class="bg-white p-3 rounded-full bg-opacity-40 shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+                />
+              </svg>
+            </button>
+            <button
+              onclick="next()"
+              class="bg-white p-3 rounded-full bg-opacity-40 shadow-lg"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="services"
+      class="items-center w-[92%] md:w-[80%] lg:w-[60%] mx-auto mt-[10vh] py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Total Health Care Solutions
+      </h2>
+      <p>
+        At Helpful Hearts, we believe in providing comprehensive health care
+        solutions tailored to meet your individual needs. Our range of services
+        ensures that you have access to the latest in medical diagnostics and
+        wellness. Your well-being is our priority, and we're here to offer you a
+        seamless healthcare experience.
+      </p>
+      <div class="grid gap-4 mt-[4vh]">
+        <div class="invisible h-0 md:visible md:h-auto">
+          <img
+            src="assets/service/accuray-nhZWIUJBVVc-unsplash.jpg"
+            alt="service1"
+            class="rounded-lg"
+          />
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <img
+            src="assets/service/jair-lazaro-0lrJo37r6Nk-unsplash.jpg"
+            alt="service5"
+            class="h-full max-w-full rounded-lg"
+          />
+          <img
+            src="assets/service/national-cancer-institute-DK--4VWK1tw-unsplash.jpg"
+            alt="service6"
+            class="h-auto max-w-full rounded-lg"
+          />
+          <img
+            src="assets/service/cdc-qIR77o5woJ8-unsplash.jpg"
+            alt="service4"
+            class="h-auto max-w-full rounded-lg"
+          />
+          <img
+            src="assets/service/amit-gaur-YSbvqo9YLHA-unsplash.jpg"
+            alt="service3"
+            class="h-auto max-w-full rounded-lg"
+          />
+          <img
+            src="assets/service/accuray-S34fEzWT6eE-unsplash.jpg"
+            alt="service2"
+            class="h-auto max-w-full rounded-lg"
+          />
+          <img
+            src="assets/service/accuray-nhZWIUJBVVc-unsplash.jpg"
+            alt="service1"
+            class="md:invisible md:h-0 h-full max-w-full rounded-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="doctors"
+      class="items-center w-[92%] lg:w-[70%] mx-auto py-2 text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Our Medical Specialists
+      </h2>
+      <p>
+        Meet the dedicated team of medical professionals at Helpful Hearts,
+        committed to providing expert care in various specialties. Each
+        specialist brings a wealth of experience and expertise to ensure you
+        receive the highest standard of healthcare.
+      </p>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[4vh]"
+      >
+        <div
+          class="max-w-fit bg-white border border-gray-200 rounded-lg shadow justify-center"
+        >
+          <img
+            class="rounded-t-lg object-cover h-[60vh] md:h-[50vh] w-full"
+            src="assets/staff/austin-distel-7bMdiIqz_J4-unsplash.jpg"
+            alt="Austin Distel"
+          />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              Dr. Austin Distel
+            </h5>
+            <p class="mb-3 font-normal text-sm text-gray-700">
+              Dr. Austin Distel specializes in mental health and emotional
+              well-being. With a compassionate approach, he helps individuals
+              navigate challenges such as anxiety, depression, and stress,
+              providing personalized treatment plans to promote mental wellness.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="max-w-fit bg-white border border-gray-200 rounded-lg shadow content-center"
+        >
+          <img
+            class="rounded-t-lg object-cover h-[60vh] md:h-[50vh] w-full"
+            src="assets/staff/bermix-studio-ODM_VsTM2QQ-unsplash.jpg"
+            alt="Tin Bern"
+          />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              Dr. Tin Bern
+            </h5>
+            <p class="mb-3 font-normal text-sm text-gray-700">
+              Dr. Tin Bern, our experienced dentist, is dedicated to ensuring
+              your oral health. From routine checkups to advanced dental
+              procedures, she focuses on creating healthy smiles and providing
+              comprehensive dental care for patients of all ages.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="max-w-fit bg-white border border-gray-200 rounded-lg shadow"
+        >
+          <img
+            class="rounded-t-lg object-cover h-[60vh] md:h-[50vh] w-full"
+            src="assets/staff/bruno-rodrigues-279xIHymPYY-unsplash.jpg"
+            alt="Bruno Rodrigues"
+          />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              Dr. Bruno Rodrigues
+            </h5>
+            <p class="mb-3 font-normal text-sm text-gray-700">
+              Dr. Bruno Rodrigues, our esteemed cardiologist, specializes in
+              heart health. With a focus on preventive care and advanced
+              diagnostics, he is committed to helping you maintain a healthy
+              heart and addressing cardiovascular concerns.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="max-w-fit bg-white border border-gray-200 rounded-lg shadow"
+        >
+          <img
+            class="rounded-t-lg object-cover h-[60vh] md:h-[50vh] w-full"
+            alt="Dalton Ngangi"
+            src="assets/staff/dalton-ngangi-ZCztndOWdjs-unsplash.jpg"
+          />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              Dr. Dalton Ngangi
+            </h5>
+            <p class="mb-3 font-normal text-sm text-gray-700">
+              Dr. Dalton Ngangi, our skilled neurosurgeon, brings expertise in
+              the diagnosis and treatment of neurological conditions. From spine
+              surgeries to complex procedures, he is dedicated to providing
+              comprehensive care for neurological well-being.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="max-w-fit bg-white border border-gray-200 rounded-lg shadow"
+        >
+          <img
+            class="rounded-t-lg object-cover h-[60vh] md:h-[50vh] w-full"
+            src="assets/staff/humberto-chavez-FVh_yqLR9eA-unsplash.jpg"
+            alt="Humberto Chavez"
+          />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              Dr. Humberto Chavez
+            </h5>
+            <p class="mb-3 font-normal text-sm text-gray-700">
+              Dr. Humberto Chavez, our orthopedic surgeon, specializes in
+              musculoskeletal health. Whether it's joint issues or orthopedic
+              injuries, she offers surgical and non-surgical interventions to
+              restore mobility and improve overall orthopedic health.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="max-w-fit bg-white border border-gray-200 rounded-lg shadow"
+        >
+          <img
+            class="rounded-t-lg object-cover h-[60vh] md:h-[50vh] w-full"
+            src="assets/staff/usman-yousaf-pTrhfmj2jDA-unsplash.jpg"
+            alt="Usman Yousaf"
+          />
+          <div class="p-5">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+              Dr. Usman Yousaf
+            </h5>
+            <p class="mb-3 font-normal text-sm text-gray-700">
+              Dr. Usman Yousaf, our pulmonologist, focuses on respiratory
+              health. With expertise in treating conditions like asthma, COPD,
+              and lung diseases, he strives to enhance your respiratory
+              well-being through personalized care and advanced treatments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="counter"
+      class="max-w-100 mb-4 items-center w-[92%] lg:w-[70%] mx-auto py-2 text-center"
+    >
+      <h2
+        class="mb-4 mt-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        The Health Tracker
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-5">
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <img
+            class="mx-auto h-15 w-12"
+            src="./assets/Counter/healthcare.png"
+          />
+          <p class="text-4xl text-blue-800 font-bold text-center mb-2">999</p>
+          <p class="text-sm font-bold text-center">Happy patients</p>
+        </div>
+        <div class="object-cover bg-white rounded-lg shadow-md p-6">
+          <img
+            class="mx-auto h-15 w-12"
+            src="./assets/Counter/first-aid-kit.png"
+          />
+          <p class="text-4xl text-blue-800 font-bold text-center mb-2">499</p>
+          <p class="text-sm font-bold text-center">Doctors</p>
+        </div>
+        <div class="object-cover bg-white rounded-lg shadow-md p-6">
+          <img class="mx-auto h-15 w-12" src="./assets/Counter/medicine.png" />
+          <p class="text-4xl text-blue-800 font-bold text-center mb-2">199</p>
+          <p class="text-sm font-bold text-center">Local Partners</p>
+        </div>
+        <div class="object-cover bg-white rounded-lg shadow-md p-6">
+          <img class="mx-auto h-15 w-12" src="./assets/Counter/hospital.png" />
+          <p class="text-4xl text-blue-800 font-bold text-center mb-2">3</p>
+          <p class="text-sm font-bold text-center">Pharmacy</p>
+        </div>
+        <div class="object-cover bg-white rounded-lg shadow-md p-6">
+          <img class="mx-auto h-15 w-12" src="./assets/Counter/patient.png" />
+          <p class="text-4xl text-blue-800 font-bold text-center mb-2">99</p>
+          <p class="text-sm font-bold text-center">Services</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="testimonial"
+      class="items-center py-5 w-[92%] lg:w-[70%] mx-auto text-center"
+    >
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl"
+      >
+        Testimonials
+      </h2>
+      <p>
+        Discover what our patients have to say about their experience with
+        Helpful Hearts. We are grateful for the opportunity to make a positive
+        impact on the lives of individuals and families through compassionate
+        and comprehensive healthcare. Here are a few testimonials from our
+        valued patients
+      </p>
+      <div class="mt-[4vh] grid gap-6 text-center md:grid-cols-3">
+        <div class="h-[100%] block rounded-lg bg-white shadow-lg">
+          <div class="h-28 overflow-hidden rounded-t-lg bg-blue-800"></div>
+          <div
+            class="mx-auto -mt-12 w-24 h-24 overflow-hidden rounded-full border-1 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800"
+          >
+            <img src="https://i.pravatar.cc/100?img=1" />
+          </div>
+          <div class="p-6">
+            <h4 class="mb-4 text-2xl font-semibold">Christopher Belly</h4>
+            <hr />
+            <p class="mt-4">
+              <span class="inline-block pe-2 [&>svg]:w-5"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                  />
+                </svg>
+              </span>
+              From the moment I walked through the doors of Helpful Hearts, I
+              knew I was in good hands. The staff greeted me with warmth and
+              professionalism, and the level of care I received exceeded my
+              expectations. I highly recommend Helpful Hearts to anyone in need
+              of quality healthcare.
+            </p>
+          </div>
+        </div>
+        <div class="h-[100%] block rounded-lg bg-white shadow-lg">
+          <div class="h-28 overflow-hidden rounded-t-lg bg-blue-800"></div>
+          <div
+            class="mx-auto -mt-12 w-24 h-24 overflow-hidden rounded-full border-1 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mb-4 text-2xl font-semibold">Lisa Cudrow</h4>
+            <hr />
+            <p class="mt-4">
+              <span class="inline-block pe-2 [&>svg]:w-5"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                  />
+                </svg>
+              </span>
+              I have been coming to Helpful Hearts for years, and I wouldn't
+              trust my health to anyone else. The team here truly cares about
+              their patients, and it shows in every interaction. Thank you for
+              being a trusted partner in my health journey.
+            </p>
+          </div>
+        </div>
+        <div class="h-[100%] block rounded-lg bg-white shadow-lg">
+          <div class="h-28 overflow-hidden rounded-t-lg bg-blue-800"></div>
+          <div
+            class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-1 border-white bg-white"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            />
+          </div>
+          <div class="p-6">
+            <h4 class="mb-4 text-2xl font-semibold">Alexander Hipp</h4>
+            <hr />
+            <p class="mt-4">
+              <span class="inline-block pe-2 [&>svg]:w-5"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V320 288 216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H320c-35.3 0-64-28.7-64-64V320 288 216z"
+                  />
+                </svg>
+              </span>
+              Thanks to the exceptional care I received at Helpful Hearts, I am
+              now able to live my life to the fullest. The doctors and staff
+              went above and beyond to ensure my well-being, and I am forever
+              grateful for their expertise and compassion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-800 mt-4">
+      <div class="mx-auto w-[92%] max-w-screen-xl p-4 py-6 items-center">
+        <div class="flex justify-between">
+          <div class="mb-6 md:mb-0">
+            <p class="font-bold text-white text-lg">Helpful Hearts</p>
+          </div>
+          <div class="text-right">
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Links
+            </h2>
+            <ul class="text-white font-medium">
+              <li>
+                <a class="hover:text-white" href="/index.html#hero">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#services"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#doctors"
+                  >Doctors</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/index.html#counter"
+                  >Testimonials</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white" href="/extra/contact_us.html"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white text-center"
+          >&copy; <a href="#" class="hover:underline">Team Risers</a>. All
+          Rights Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script>
+      let i = 0;
+
+      let images = [
+        "assets/hero/hero1.jpg",
+        "assets/hero/hero2.jpg",
+        "assets/hero/hero3.jpg",
+      ];
+      //slider functionality
+      document.slide.src = images[i];
+
+      // slider previous functionality
+
+      function previous() {
+        if (i === 0) {
+          i = images.length - 1;
+        } else {
+          i--;
+        }
+        document.slide.src = images[i];
+      }
+
+      // slider next functionality
+      function next() {
+        if (i === images.length - 1) {
+          i = 0;
+        } else {
+          i++;
+        }
+        document.slide.src = images[i];
+      }
+    </script>
+    <script>
+      navlinks = document.querySelector(".nav-links");
+      let e = document.querySelector(".menu");
+      function toggleMenu() {
+        navlinks.classList.toggle("top-[6%]");
+        e.name = e.name === "menu" ? "close" : "menu";
+      }
+    </script>
+  </body>
+</html>
